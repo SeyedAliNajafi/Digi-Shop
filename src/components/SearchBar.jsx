@@ -2,9 +2,10 @@
 import AddToCart from "@/app/(user)/products/[slug]/AddToCart";
 import CategorySidebar from "@/app/(user)/products/CategorySideBar";
 import LikeProduct from "@/app/(user)/products/LikeProduct";
+import Loader from "@/common/Loader";
 import { toPersianNumbersWithComma } from "@/utils/toPersianNumbers";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 
 function SearchBar({ products, categories }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,7 +17,6 @@ function SearchBar({ products, categories }) {
       .includes(searchQuery.toLowerCase())
   );
 
-  
   return (
     <div className="flex flex-col justify-center items-center w-screen md:w-auto md:block">
       <div className="relative">
@@ -50,7 +50,9 @@ function SearchBar({ products, categories }) {
               >
                 <div className="flex justify-between ">
                   <h2 className="font-bold text-xl mb-4">{product.title}</h2>
-                  <LikeProduct product={product} />
+                  <Suspense fallback={<Loader/>}>
+                    <LikeProduct product={product} />
+                  </Suspense>
                 </div>
                 <div className="mb-4 w-60 h-60 flex justify-center items-center">
                   <img
@@ -130,7 +132,12 @@ function SearchBar({ products, categories }) {
         ) : (
           <div>
             <p>محصول مورد نظر یافت نشد!</p>
-            <Link href="/#contact-us" className="text-nowrap hover:text-primary-900 transition-all">برای پشنهاد اضافه کردن محصولات جدید لطفا اینجا کلیک کنید.</Link>
+            <Link
+              href="/#contact-us"
+              className="text-nowrap hover:text-primary-900 transition-all"
+            >
+              برای پشنهاد اضافه کردن محصولات جدید لطفا اینجا کلیک کنید.
+            </Link>
           </div>
         )}
       </div>

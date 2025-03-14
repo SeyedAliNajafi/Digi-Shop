@@ -4,6 +4,8 @@ import "../../globals.css";
 import { Toaster } from "react-hot-toast";
 import AdminSideBar from "./AdminSideBar";
 import Providers from "@/app/Providers";
+import { Suspense } from "react";
+import Loader from "@/common/Loader";
 
 export const metadata = {
   title: "پروفایل ادمین",
@@ -17,15 +19,17 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
         className={`${vazirFont.variable} font-sans`}
       >
-        <Providers>
-          <Toaster />
-          <div className="grid grid-cols-5 bg-white h-screen">
-            <div className="col-span-1 bg-gray-100 overflow-y-auto p-4">
-              <AdminSideBar />
+        <Suspense fallback={<Loader />}>
+          <Providers>
+            <Toaster />
+            <div className="grid grid-cols-5 bg-white h-screen">
+              <div className="col-span-1 bg-gray-100 overflow-y-auto p-4">
+                <AdminSideBar />
+              </div>
+              <div className="col-span-4 overflow-y-auto p-4">{children}</div>
             </div>
-            <div className="col-span-4 overflow-y-auto p-4">{children}</div>
-          </div>
-        </Providers>
+          </Providers>
+        </Suspense>
       </body>
     </html>
   );

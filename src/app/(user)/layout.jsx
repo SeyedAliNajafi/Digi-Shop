@@ -3,6 +3,8 @@ import "../globals.css";
 import Header from "../Header";
 import { Toaster } from "react-hot-toast";
 import Providers from "../Providers";
+import { Suspense } from "react";
+import Loader from "@/common/Loader";
 
 export const metadata = {
   title: "Next Shop Panel",
@@ -36,11 +38,13 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
         className={`${vazirFont.variable} font-sans`}
       >
-        <Providers>
-          <Toaster />
-          <Header />
-          {children}
-        </Providers>
+        <Suspense fallback={<Loader/>}>
+          <Providers>
+            <Toaster />
+            <Header />
+            {children}
+          </Providers>
+        </Suspense>
       </body>
     </html>
   );

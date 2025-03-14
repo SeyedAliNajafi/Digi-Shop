@@ -1,9 +1,10 @@
 import AddToCart from "@/app/(user)/products/[slug]/AddToCart";
 import LikeProduct from "@/app/(user)/products/LikeProduct";
+import Loader from "@/common/Loader";
 import { useGetProducts } from "@/hooks/useProducts";
 import { toPersianNumbersWithComma } from "@/utils/toPersianNumbers";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 
 function SpecialOff({ products }) {
   // const { data, isLoading } = useGetProducts();
@@ -25,7 +26,9 @@ function SpecialOff({ products }) {
             >
               <div className="flex justify-between">
                 <h2 className="font-bold text-xl mb-4">{product.title}</h2>
-                <LikeProduct product={product} />
+                <Suspense fallback={<Loader />}>
+                  <LikeProduct product={product} />
+                </Suspense>
               </div>
               <div className="mb-4 w-60 h-60 flex justify-center items-center">
                 <img

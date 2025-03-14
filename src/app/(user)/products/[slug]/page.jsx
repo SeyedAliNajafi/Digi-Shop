@@ -6,6 +6,8 @@ import {
 } from "@/utils/toPersianNumbers";
 import StarRating from "@/common/StarRating";
 import LikeSlug from "./LikeSlug";
+import Loader from "@/common/Loader";
+import { Suspense } from "react";
 
 export const dynamic = "force-static"; // SSG or {cache : "force-cache"}
 export const dynamicParams = false;
@@ -73,7 +75,9 @@ async function page({ params }) {
         </div>
         <div className="flex justify-between items-center">
           <h1 className="font-bold text-2xl">{product.title}</h1>
-          <LikeSlug product={product} />
+          <Suspense fallback={<Loader />}>
+            <LikeSlug product={product} />
+          </Suspense>
         </div>
         <div className=" w-full flex justify-center items-center object-cover">
           <img className="h-60" src={product.imageLink} alt="" />
@@ -260,7 +264,9 @@ async function page({ params }) {
         <div className="flex justify-between items-center mb-6 gap-x-3">
           <h1 className="font-bold text-2xl">{product.title}</h1>
           <div className="mt-1.5">
-            <LikeSlug product={product} />
+            <Suspense fallback={<Loader />}>
+              <LikeSlug product={product} />
+            </Suspense>
           </div>
         </div>
         <p className="mb-6">
