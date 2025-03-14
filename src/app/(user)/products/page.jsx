@@ -1,15 +1,11 @@
 import { getCategories } from "@/services/categoryService";
-import CategorySidebar from "./CategorySidebar";
 import queryString from "query-string";
-import Link from "next/link";
-import AddToCart from "./[slug]/AddToCart";
 import { cookies } from "next/headers";
 import { toStringCookies } from "@/utils/toStringCookies";
 import { getProducts } from "@/services/productsService";
-import LikeProduct from "./LikeProduct";
-import { toPersianNumbersWithComma } from "@/utils/toPersianNumbers";
 import SearchBar from "@/components/SearchBar";
 import Footer from "@/components/Footer";
+import CategorySidebar from "./CategorySideBar";
 
 export const dynamic = "force-dynamic"; // eq to {cache :"no-store"} or SSR in pages Dir. :)
 
@@ -29,7 +25,6 @@ async function Products({ searchParams }) {
     categoryPromise,
   ]);
 
-  
   return (
     <div className="container xl:max-w-screen-xl flex flex-col justify-center items-center md:block">
       <h1 className="text-xl font-bold my-4">صفحه محصولات</h1>
