@@ -43,8 +43,6 @@ function page() {
       toast.error(error?.response?.data?.message);
     }
   };
-
-  console.log(coupon);
   useEffect(() => {
     if (coupon) {
       setType(coupon.type);

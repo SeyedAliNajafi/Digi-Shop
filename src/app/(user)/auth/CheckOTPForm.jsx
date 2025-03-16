@@ -60,7 +60,7 @@ function CheckOTPForm({
           </div>
         ) : (
           <button className="btn btn--primary w-full" type="submit">
-            ارسال كد تاييد
+            تایید
           </button>
         )}
       </form>

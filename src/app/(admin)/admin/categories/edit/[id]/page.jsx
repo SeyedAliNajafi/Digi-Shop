@@ -14,8 +14,6 @@ function page() {
   const { id } = useParams();
   const { data, isLoading: isLoadingCategory } = useGetCategoryById(id);
   const { category } = data || {};
-  console.log(category);
-  
   const [formData, setFormData] = useState({});
   const [selectedType, setSelectedType] = useState("");
   const { isLoading, mutateAsync } = useUpdateCategory();

@@ -33,7 +33,6 @@ function AddToCart({ product }) {
       }
     }
   };
-console.log(product);
 
   const isInCart = (user, product) => {
     if (!user) return false;

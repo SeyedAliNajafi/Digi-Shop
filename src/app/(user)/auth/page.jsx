@@ -13,8 +13,6 @@ function AuthPage() {
   const [otp, setOtp] = useState("");
   const [time, setTime] = useState(RESEND_TIME);
   const router = useRouter();
-  console.log(step);
-
   const {
     data: otpResponse,
     error,
