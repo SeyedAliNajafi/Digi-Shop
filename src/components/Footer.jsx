@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="container xl:max-w-screen-xl bg-gray-100 rounded-2xl p-4 mt-10 lg:my-10 px-3">
+    <div className="container xl:max-w-screen-xl bg-gray-100 rounded-2xl p-4  lg:my-10 px-3">
       <div className="flex flex-col md:flex-row justify-between items-center mx-8 gap-y-">
         <div className="md:w-96 w-80">
           <Logo size="size-24" />
@@ -21,7 +21,11 @@ function Footer() {
           dir="ltr"
         >
           <div className="flex flex-row gap-x-5 items-center hover:text-primary-900 fill-current">
-            <a href="https://github.com/SeyedAliNajafi" target="_blank">
+            <a
+              href="https://github.com/SeyedAliNajafi"
+              target="_blank"
+              className="fill-current"
+            >
               <svg
                 className="size-8 transition-all duration-500"
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,6 +40,28 @@ function Footer() {
               target="_blank"
             >
               SeyedAliNajafi
+            </a>
+          </div>
+          <div className="flex flex-row gap-x-5 items-center hover:text-primary-900 fill-current">
+            <a
+              href="www.linkedin.com/in/seyed-ali-najafi"
+              target="_blank"
+              className="fill-current"
+            >
+              <svg
+                className="size-8 transition-all duration-500 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+              </svg>
+            </a>
+            <a
+              className=" transition-all duration-400"
+              href="www.linkedin.com/in/seyed-ali-najafi"
+              target="_blank"
+            >
+              Seyed Ali Najafi
             </a>
           </div>
           <div className="flex flex-row gap-x-5 items-center hover:text-primary-900 fill-current">
@@ -55,6 +81,28 @@ function Footer() {
               id="section1"
             >
               seyedalinajafi.ir
+            </a>
+          </div>
+          <div className="flex flex-row gap-x-5 items-center hover:text-primary-900 fill-current">
+            <a
+              href="https://t.me/AliNajafi006"
+              target="_blank"
+              className="fill-current"
+            >
+              <svg
+                className="size-8 transition-all duration-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+              >
+                <path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+              </svg>
+            </a>
+            <a
+              className=" transition-all duration-400"
+              href="https://t.me/AliNajafi006"
+              target="_blank"
+            >
+              AliNajafi006
             </a>
           </div>
           <div className="flex flex-row gap-x-5 items-center hover:text-primary-900 fill-current">
