@@ -75,7 +75,7 @@ function SideBarMobile({ isOpen, setIsOpen , user }) {
         </li>
       </ul>
       {!user ? null : (
-        <div className="flex justify-between items-center w-fit md:gap-x-4 lg:gap-x-6 xl:gap-x-7 fixed bottom-10 border border-gray-400 rounded-2xl p-3">
+        <div className="flex justify-between items-center w-fit gap-x-3 md:gap-x-4 lg:gap-x-6 xl:gap-x-7 fixed bottom-10 border border-gray-400 rounded-2xl p-3">
           <ProfilePic />
           <div>
             <p className="font-semibold text-md">{user.name}</p>

@@ -95,7 +95,7 @@ function AuthPage() {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mx-10 md:mx-0">
       <div className="w-full sm:max-w-sm">{renderSteps()}</div>
     </div>
   );

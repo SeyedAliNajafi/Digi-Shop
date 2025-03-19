@@ -40,8 +40,8 @@ function HeaderSidebar({ isOpen, setIsOpen, user, isLoading }) {
           </svg>
         </span>
       </div>
-      <hr className="border-gray-300 mb-20" />
-      <div className="flex flex-col gap-y-8">
+      <hr className="border-gray-300 mb-12" />
+      <div className="flex flex-col gap-y-12">
         <div>
           <Link href="/" className="flex gap-x-3 items-center">
             <svg
@@ -84,7 +84,7 @@ function HeaderSidebar({ isOpen, setIsOpen, user, isLoading }) {
         </div>
       </div>
       {!user ? null : (
-        <div className="flex justify-between items-center w-fit md:gap-x-4 lg:gap-x-6 xl:gap-x-7 fixed bottom-10 border border-gray-400 rounded-2xl p-3">
+        <div className="flex justify-between items-center w-fit gap-x-3 md:gap-x-4 lg:gap-x-6 xl:gap-x-7 fixed bottom-10 border border-gray-400 rounded-2xl p-3">
           <ProfilePic />
           <div>
             <p className="font-semibold text-md">{user.name}</p>

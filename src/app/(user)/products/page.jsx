@@ -26,8 +26,7 @@ async function Products({ searchParams }) {
   ]);
 
   return (
-    <div className="container xl:max-w-screen-xl flex flex-col justify-center items-center md:block">
-      <h1 className="text-xl font-bold my-4">صفحه محصولات</h1>
+    <div className="container xl:max-w-screen-xl flex flex-col justify-center items-center md:block mt-4">
       <div className="grid grid-cols-4">
         <div className="hidden lg:block">
           <CategorySidebar categories={categories} />

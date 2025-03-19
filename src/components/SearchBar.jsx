@@ -18,7 +18,8 @@ function SearchBar({ products, categories }) {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center w-screen md:w-auto md:block">
+    <div className="flex flex-col justify-center items-center w-screen md:w-auto md:block my-3">
+      <h1 className="text-xl font-bold my-4 block lg:hidden">صفحه محصولات</h1>
       <div className="relative">
         <span className="absolute right-3 top-4">
           <svg
@@ -50,7 +51,7 @@ function SearchBar({ products, categories }) {
               >
                 <div className="flex justify-between ">
                   <h2 className="font-bold text-xl mb-4">{product.title}</h2>
-                  <Suspense fallback={<Loader/>}>
+                  <Suspense fallback={<Loader />}>
                     <LikeProduct product={product} />
                   </Suspense>
                 </div>
